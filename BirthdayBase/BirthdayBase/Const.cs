@@ -1,4 +1,4 @@
-﻿namespace BirthdayBaseX
+﻿namespace BirthdayBase
 {
     public static class Const
     {

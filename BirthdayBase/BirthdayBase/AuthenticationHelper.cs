@@ -9,7 +9,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace BirthdayBaseX
+namespace BirthdayBase
 {
     internal static class AuthenticationHelper
     {

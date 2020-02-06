@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Appointments;
 using Windows.System;
 
-namespace BirthdayBaseX.UWP
+namespace BirthdayBase.UWP
 {
     internal class WindowsCalendar : IDeviceCalendar
     {

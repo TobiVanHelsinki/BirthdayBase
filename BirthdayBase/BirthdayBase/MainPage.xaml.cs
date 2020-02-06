@@ -1,4 +1,4 @@
-﻿using BirthdayBaseX.Resources;
+﻿using BirthdayBase.Resources;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace BirthdayBaseX
+namespace BirthdayBase
 {
     class MainPageModel : INotifyPropertyChanged
 	{

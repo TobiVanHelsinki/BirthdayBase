@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="BirthdayBaseX.UWP.App"
+    x:Class="BirthdayBase.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:BirthdayBaseX.UWP"
+    xmlns:local="using:BirthdayBase.UWP"
 >
     <Application.Resources>
         <!--<x:String x:Key="ida:ClientID">a2af7f26-7e91-4477-ae02-d22f2c4cdf9a</x:String>

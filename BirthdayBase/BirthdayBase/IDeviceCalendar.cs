@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace BirthdayBaseX
+namespace BirthdayBase
 {
     public interface IDeviceCalendar
     {

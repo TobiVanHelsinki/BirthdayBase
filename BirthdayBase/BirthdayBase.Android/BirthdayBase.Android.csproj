@@ -92,9 +92,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BirthdayBaseX\BirthdayBaseX.csproj">
-      <Project>{5C28550D-2BDF-4927-93E9-3EB343C77D74}</Project>
-      <Name>BirthdayBaseX</Name>
+    <ProjectReference Include="..\BirthdayBase\BirthdayBase.csproj">
+      <Project>{8597e371-e68c-46cb-9fea-d37aa3700519}</Project>
+      <Name>BirthdayBase</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BirthdayBaseX
+namespace BirthdayBase
 {
     internal class MicrosoftCalendar : IDeviceCalendar
     {

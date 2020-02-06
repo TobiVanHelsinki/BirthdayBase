@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BirthdayBaseX.Resources {
+namespace BirthdayBase.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace BirthdayBaseX.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BirthdayBaseX.Resources.AppResource", typeof(AppResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BirthdayBase.Resources.AppResource", typeof(AppResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

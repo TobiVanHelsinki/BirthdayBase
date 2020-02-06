@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace BirthdayBaseX.Droid
+namespace BirthdayBase.Droid
 {
     internal class AndroidCalendar : IDeviceCalendar
     {

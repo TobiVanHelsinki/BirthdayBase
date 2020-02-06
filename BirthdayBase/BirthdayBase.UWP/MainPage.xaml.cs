@@ -1,11 +1,11 @@
-﻿namespace BirthdayBaseX.UWP
+﻿namespace BirthdayBase.UWP
 {
     public sealed partial class MainPage
     {
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new BirthdayBaseX.App(new WindowsCalendar()));
+            LoadApplication(new BirthdayBase.App(new WindowsCalendar()));
         }
     }
 }

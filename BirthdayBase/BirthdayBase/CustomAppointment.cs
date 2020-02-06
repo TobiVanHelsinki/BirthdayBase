@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BirthdayBaseX
+namespace BirthdayBase
 {
     public class CustomAppointment
     {
