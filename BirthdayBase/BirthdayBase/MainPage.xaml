@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BirthdayBaseX"
+             x:Class="BirthdayBaseX.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainPageModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="CSVInputBorder" CornerRadius="0" Margin="0" Padding="7">
+            <Editor x:Name="CSVInput" Text="{Binding FileContent, Mode=TwoWay}" TextChanged="CSVInput_TextChanged" />
+        </Frame>
+        <Frame Grid.Row="1" Padding="7">
+            <ListView x:Name="NotificationsView" ItemsSource="{Binding Notifications}"/>
+        </Frame>
+        <Grid Grid.Row="2" Padding="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Text="Create / Update Calendar" Clicked="UpdateCalendar"/>
+            <Button Grid.Column="1" Text="Help" Clicked="Help"/>
+            <Button Grid.Column="2" Text="Delete Calendar" Clicked="DeleteCalendar"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>

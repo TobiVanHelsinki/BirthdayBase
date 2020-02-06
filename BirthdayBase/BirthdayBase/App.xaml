@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BirthdayBaseX.App">
+    <Application.Resources>
+        <x:String x:Key="ida:ClientID">a2af7f26-7e91-4477-ae02-d22f2c4cdf9a</x:String>
+        <x:String x:Key="ida:ReturnUrl">urn:ietf:wg:oauth:2.0:oob</x:String>
+    </Application.Resources>
+</Application>
