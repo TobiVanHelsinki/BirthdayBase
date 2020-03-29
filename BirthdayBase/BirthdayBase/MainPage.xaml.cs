@@ -7,6 +7,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace BirthdayBase
@@ -192,15 +193,18 @@ namespace BirthdayBase
                     NewNot("Error Getting Date \"{2}\" from {0} {1}", fields[0], fields[1], fields[2]);
                     continue;
                 }
-                CustomAppointment A = new CustomAppointment();
-                A.AllDay = fields[2].Length <= 11; // wenn also keine Uhrzeit angegeben worden ist
+                CustomAppointment a = new CustomAppointment
+                {
+                    AllDay = fields[2].Length <= 11 // wenn also keine Uhrzeit angegeben worden ist
+                };
                 if (Date.Year != 1)
                 {
-                    A.Details = AppResource.Started + ": " + Date.Year;
+                    a.Details = AppResource.Started + ": " + Date.Year;
                 }
-                A.StartTime = Date.AddYears(DateTimeOffset.UtcNow.Year - Date.Year);
-                A.Reminder = TimeSpan.FromDays(0);
-                A.RoamingId = Guid.NewGuid().ToString();
+                a.StartTime = Date.AddYears(DateTimeOffset.UtcNow.Year - Date.Year);
+                a.Reminder = TimeSpan.FromDays(0);
+                a.IsReminderOn = true;
+                a.RoamingId = Guid.NewGuid().ToString();
                 string Subject = "NA";
                 switch (fields[1])
                 {
@@ -251,18 +255,18 @@ namespace BirthdayBase
                     default:
                         break;
                 }
-                A.Subject = Subject;
+                a.Subject = Subject;
                 try
                 {
                     bool complete = false;
-                    if (!DryRun) complete = await CalendarTouse.SaveAppointmentAsync(A);
+                    if (!DryRun) complete = await CalendarTouse.SaveAppointmentAsync(a);
                     if (!complete) throw new Exception();
-                    NewNot("Saved Element: \"{0}\"", A.Subject, A.RoamingId, A.LocalId);
+                    NewNot("Saved Element: \"{0}\"", a.Subject, a.RoamingId, a.LocalId);
                     Counter++;
                 }
                 catch (Exception ex)
                 {
-                    NewNot("Error Saving Element \"{0}\" m: {1}", A.Subject, ex.Message);
+                    NewNot("Error Saving Element \"{0}\" m: {1}", a.Subject, ex.Message);
                 }
             }
             if (!DryRun) await CalendarTouse.SaveAsync();
@@ -273,7 +277,7 @@ namespace BirthdayBase
 
         void Help(object sender, EventArgs e)
         {
-            //TODO Add help Text
+            NewNot("AppVersion: " + AppInfo.VersionString + ":"+AppInfo.BuildString);
         }
     }
 }
