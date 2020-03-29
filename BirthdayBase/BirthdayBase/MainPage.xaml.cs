@@ -186,7 +186,8 @@ namespace BirthdayBase
                 var x = DateTime.MinValue;
                 try
                 {
-                    Date = DateTimeOffset.Parse(fields[2].TrimEnd(' '), CultureInfo.CurrentCulture, DateTimeStyles.AssumeLocal);
+                    var input = fields[2].TrimEnd(' ').Replace(".0000", ".0001");
+                    Date = DateTimeOffset.Parse(input, CultureInfo.CurrentCulture, DateTimeStyles.AssumeLocal);
                 }
                 catch (Exception)
                 {
@@ -256,6 +257,10 @@ namespace BirthdayBase
                         break;
                 }
                 a.Subject = Subject;
+                if (fields.Length >= 4)
+                {
+                    a.Details += Environment.NewLine + fields[3];
+                }
                 try
                 {
                     bool complete = false;
