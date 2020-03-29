@@ -129,7 +129,7 @@ namespace BirthdayBase
                     Content = a.Details,
                     ContentType = BodyType.Text,
                 },
-                IsReminderOn = a.Reminder != TimeSpan.Zero,
+                IsReminderOn = a.IsReminderOn,
                 ReminderMinutesBeforeStart = a.Reminder.Days * 24 * 60 + a.Reminder.Hours * 60 + a.Reminder.Minutes,
                 OriginalStart = a.StartTime,
                 Start = new DateTimeTimeZone() { DateTime = tmptime.ToString("s"), TimeZone = "UTC" },
