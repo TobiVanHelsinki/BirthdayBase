@@ -282,7 +282,7 @@ namespace BirthdayBase
 
         void Help(object sender, EventArgs e)
         {
-            NewNot("AppVersion: " + AppInfo.VersionString + ":"+AppInfo.BuildString);
+            NewNot("AppVersion: " + AppInfo.VersionString + ":"+AppInfo.BuildString + "\n Icon inspired by Wedding Cake free icon from https://www.flaticon.com/authors/those-icons.");
         }
     }
 }
